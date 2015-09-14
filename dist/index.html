@@ -1,0 +1,85 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Palindromes</title>
+        <meta name=" Adam Debbagh software Developer, USA. Solve Palindrome problem in javascript" content="Solve Palindrome problems in javascript"><meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/main.css">
+    </head>
+    <body>
+    <div class="container">
+        <div class="text-center">
+           <span class="small"><img src="https://yt3.ggpht.com/-lw8TrMQr0T8/AAAAAAAAAAI/AAAAAAAAAAA/z-3iSzGCpQg/s64-c-k-no/photo.jpglkgofo" class="img-rounded center-block" style="display: block;" alt="...">
+               By Adam Debbagh</span>
+                <h6>Web Developer </h6>
+            <h1 class="text-primary text-center">Check for Palindromes</h1><br>
+        </div>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h3>Basic Algorithm Scripting in javascript</h3>
+                <p><span class="bg-primary">Challenge</span>:  Return true if the given string is a palindrome. Otherwise, return false.</p>
+                <p>A palindrome is a word or sentence that's spelled the same way both forward and backward, ignoring punctuation, case, and spacing.</p>
+                <p>We'll pass strings with varying formats, such as "racecar", "RaceCar", and "race CAR" among others.</p>
+                <p>You'll need to <strong>remove punctuation and turn everything lower case</strong> in order to check for palindromes.
+                </p>
+                <button class="btn btn-info"><a href="#"><i class="fa fa-github-alt"></i> Fork it</a></button>
+            </div>
+        </div>
+
+       <!--Result-->
+        <div id="result" class="jumbotron jumbotron-fluid"></div>
+        <!--Palindrome input form-->
+        <div class="row">
+            <div class="container-fluid">
+                <form id="target" class="" action="#">
+                    <div class="col-xs-8 .col-sm-8 .col-md-10">
+                    <div class="form-group">
+                        <label for="palindrometext" class="sr-only">Palindrome Text</label>
+                        <input type="Text" class="form-control" id="palindrometext" placeholder="Enter Text..">
+                    </div>
+                </div>
+                    <div class="col-xs-2 .col-md-2">
+                        <button type="submit" class="btn btn-primary">Try it </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="container highlight" style="display: none">
+        <pre>
+function palindrome(str) {
+ // Lower case str
+ str = str.toLowerCase();
+ // Remove punctuation
+ str = str.replace(/[^\w\s*]|_/g, "").replace(/\s+/g, "");
+ // Check Palindrome
+ if(str !== str.split('').reverse().join('')) {
+    return false;
+ } else {
+   return true;
+   }
+ }
+
+ // Run the Palindrome
+ palindrome("eye");
+           </pre>
+        </div>
+
+        <h5 class="bg-info text-center showCode"> View Code</h5>
+        <h5 class="bg-info text-center showCode" style="display: none"> hide Code</h5>
+
+
+
+    </div><!--//container-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/twbs/bootstrap/v4-dev/dist/js/bootstrap.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
